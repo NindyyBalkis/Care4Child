@@ -1,9 +1,11 @@
 package com.example.projectmobile
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.AppCompatButton
 import androidx.fragment.app.Fragment
 
 class OnboardingFragment : Fragment() {
@@ -20,8 +22,21 @@ class OnboardingFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        activity?.window?.statusBarColor = activity?.getColor(R.color.white)!!
+
+        val view = inflater.inflate(layoutResId!!, container, false)
+
+
+        if (layoutResId == R.layout.activity_onboarding3) {
+            view.findViewById<AppCompatButton>(R.id.btn_start).setOnClickListener {
+                val intent = Intent(activity, LoginActivity::class.java)
+                startActivity(intent)
+                activity?.finish()
+            }
+        }
+
         // Inflate the layout for this fragment
-        return inflater.inflate(layoutResId!!, container, false)
+        return view
     }
 
     companion object {
@@ -35,4 +50,5 @@ class OnboardingFragment : Fragment() {
                 }
             }
     }
+
 }

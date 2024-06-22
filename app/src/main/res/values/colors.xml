@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
+    <color name="black">#1C1C1C</color>
     <color name="white">#FFFFFFFF</color>
     <color name="pink">#E07485</color>
+    <color name="primary_pressed">#D74C62</color>
     <color name="softpink">#F5C9C8</color>
+    <color name="surface">#F9F9F9</color>
+    <color name="border">#d4d4d8</color>
+    <color name="disabled">#71717a</color>
+    <color name="blue">#699BF7</color>
 </resources>

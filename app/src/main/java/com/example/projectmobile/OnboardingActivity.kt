@@ -3,13 +3,13 @@ package com.example.projectmobile
 import android.os.Bundle
 import android.os.Handler
 import androidx.fragment.app.FragmentActivity
+import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
-import com.example.projectmobile.R
 
 class OnboardingActivity : FragmentActivity() {
 
     private lateinit var viewPager: ViewPager2
-    private lateinit var onboardingAdapter: OnboardingAdapter
+    private lateinit var onboardingAdapter: FragmentStateAdapter
     private var currentPage = 0
     private val handler = Handler()
     private val autoScrollRunnable = object : Runnable {
