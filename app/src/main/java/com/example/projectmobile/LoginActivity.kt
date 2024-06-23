@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.projectmobile.databinding.ActivityLoginBinding
+import com.example.projectmobile.home.HomeActivity
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
@@ -29,7 +30,10 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this, "Email dan Password harus diisi", Toast.LENGTH_SHORT).show()
             } else {
                 // Start MainActivity
-                Toast.makeText(this, "Login", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Login berhasil", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, HomeActivity::class.java)
+                startActivity(intent)
+                finish()
             }
         }
 

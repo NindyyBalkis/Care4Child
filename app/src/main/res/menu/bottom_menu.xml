@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_inactive"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/navigation_tanya_ahli"
+        android:icon="@drawable/ic_ahli_inactive"
+        android:title="Tanya Ahli" />
+
+    <item
+        android:id="@+id/navigation_konten"
+        android:icon="@drawable/ic_book_inactive"
+        android:title="Konten" />
+
+    <item
+        android:id="@+id/navigation_profil"
+        android:icon="@drawable/ic_profile_inactive"
+        android:title="Profil" />
+
+</menu>

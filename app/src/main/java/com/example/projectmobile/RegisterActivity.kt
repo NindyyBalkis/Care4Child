@@ -46,8 +46,10 @@ class RegisterActivity : AppCompatActivity() {
             } else {
                 // Start MainActivity
 
-                Toast.makeText(this, "Register", Toast.LENGTH_SHORT).show()
-
+                Toast.makeText(this, "Register berhasil, silahkan login", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
+                finish()
             }
 
         }

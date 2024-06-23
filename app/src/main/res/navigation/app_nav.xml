@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.projectmobile.home.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/kontenFragment"
+        android:name="com.example.projectmobile.home.ui.KontenFragment"
+        android:label="fragment_konten"
+        tools:layout="@layout/fragment_konten" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.projectmobile.home.ui.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/tanyaAhliFragment"
+        android:name="com.example.projectmobile.home.ui.TanyaAhliFragment"
+        android:label="fragment_tanya_ahli"
+        tools:layout="@layout/fragment_tanya_ahli" />
+</navigation>

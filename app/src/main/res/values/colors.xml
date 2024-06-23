@@ -5,8 +5,19 @@
     <color name="pink">#E07485</color>
     <color name="primary_pressed">#D74C62</color>
     <color name="softpink">#F5C9C8</color>
+    <color name="softer_pink">#F7E6E5</color>
     <color name="surface">#F9F9F9</color>
     <color name="border">#d4d4d8</color>
     <color name="disabled">#71717a</color>
     <color name="blue">#699BF7</color>
+    <color name="text_black">#494949</color>
+    <color name="text_gray">#808080</color>
+
+    <color name="softpink_20">#F7E5E5</color>
+    <color name="softblue_20">#C3D9ED</color>
+    <color name="softpurple_20">#D4CFE7</color>
+    <color name="softyellow_20">#F9F3E1</color>
+    <color name="softblue2_20">#B8D7F3</color>
+
+    <color name="softpink_20_shadow">#3DE0BAC0</color>
 </resources>
