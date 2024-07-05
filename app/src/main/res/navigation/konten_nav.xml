@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/konten_nav"
+    app:startDestination="@id/artikelFragment">
+
+    <fragment
+        android:id="@+id/artikelFragment"
+        android:name="com.example.projectmobile.home.ui.konten.artikel.ArtikelFragment"
+        android:label="fragment_artikel"
+        tools:layout="@layout/fragment_artikel" />
+    <fragment
+        android:id="@+id/modulFragment"
+        android:name="com.example.projectmobile.home.ui.konten.modul.ModulFragment"
+        android:label="fragment_modul"
+        tools:layout="@layout/fragment_modul" />
+    <fragment
+        android:id="@+id/videoFragment"
+        android:name="com.example.projectmobile.home.ui.konten.video.VideoFragment"
+        android:label="fragment_video"
+        tools:layout="@layout/fragment_video" />
+</navigation>

@@ -10,6 +10,7 @@ import com.example.projectmobile.R
 import com.example.projectmobile.databinding.ActivityHomeBinding
 import com.example.projectmobile.home.ui.HomeFragment
 import com.example.projectmobile.home.ui.KontenFragment
+import com.example.projectmobile.home.ui.ProfileFragment
 import com.example.projectmobile.home.ui.TanyaAhliFragment
 
 class HomeActivity : AppCompatActivity() {
@@ -41,7 +42,7 @@ class HomeActivity : AppCompatActivity() {
                 }
 
                 R.id.navigation_profil -> {
-                    swapFragment(HomeFragment())
+                    swapFragment(ProfileFragment())
                     return@setOnItemSelectedListener true
                 }
 
