@@ -20,9 +20,9 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
+        window.statusBarColor = getColor(R.color.softpink)
         setContentView(binding.root)
 
-        window.statusBarColor = getColor(R.color.pink)
 
         binding.bottomNav?.setOnItemSelectedListener {
             when (it.itemId) {

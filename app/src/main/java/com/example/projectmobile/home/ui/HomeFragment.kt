@@ -18,6 +18,8 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentHomeBinding.inflate(inflater, container, false)
 
+        activity?.window?.statusBarColor = resources.getColor(R.color.softpink)
+
         binding.cvKontenList.setOnClickListener {
             swapFragment(KontenFragment())
         }

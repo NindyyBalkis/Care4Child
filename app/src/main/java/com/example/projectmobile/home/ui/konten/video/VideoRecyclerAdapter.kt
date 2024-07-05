@@ -1,8 +1,10 @@
 package com.example.projectmobile.home.ui.konten.video
 
 import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.MediaController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projectmobile.data.Video
 import com.example.projectmobile.databinding.LayoutVideoItemBinding
@@ -44,6 +46,13 @@ class VideoRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         fun bind(video: Video) {
             binding.tvJudul.text = video.judul
             binding.tvIsi.text = video.isi
+
+            binding.vwVideo.setVideoURI(Uri.parse(video.video))
+
+            val mediaController = MediaController(binding.root.context)
+            binding.vwVideo.setMediaController(mediaController)
+
+            binding.vwVideo.setZOrderOnTop(true)
         }
 
         fun onClick(video: Video) {

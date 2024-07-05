@@ -4,6 +4,8 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.example.projectmobile.R
 import com.example.projectmobile.data.Modul
 import com.example.projectmobile.databinding.LayoutModulItemBinding
 
@@ -44,6 +46,12 @@ class ModulRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         fun bind(modul: Modul) {
             binding.tvJudul.text = modul.judul
             binding.tvIsi.text = modul.isi
+
+            Glide.with(this.itemView)
+                .load(modul.gambar)
+                .placeholder(R.color.pink)
+                .into(binding.ivGambar)
+
         }
 
         fun onClick(modul: Modul) {

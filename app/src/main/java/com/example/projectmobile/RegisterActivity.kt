@@ -2,21 +2,30 @@ package com.example.projectmobile
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.projectmobile.data.User
 import com.example.projectmobile.databinding.ActivityRegisterBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegisterBinding
+    private lateinit var auth: FirebaseAuth
+    private lateinit var db: FirebaseDatabase
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
+        window.statusBarColor = getColor(R.color.softpink)
         setContentView(binding.root)
 
-        window.statusBarColor = getColor(R.color.pink)
+        auth = FirebaseAuth.getInstance()
+        db = FirebaseDatabase.getInstance()
 
         binding.btnDaftar.setOnClickListener {
             val nama_lengkap = binding.etNamaLengkap.text
@@ -44,12 +53,32 @@ class RegisterActivity : AppCompatActivity() {
 
                 Toast.makeText(this, "Password tidak sama", Toast.LENGTH_SHORT).show()
             } else {
-                // Start MainActivity
+                auth.createUserWithEmailAndPassword(email.toString(), password.toString())
+                    .addOnCompleteListener {
+                        if (it.isSuccessful) {
+                            // Create user with the NamaLengkap
+                            val uid = auth.currentUser?.uid
 
-                Toast.makeText(this, "Register berhasil, silahkan login", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, LoginActivity::class.java)
-                startActivity(intent)
-                finish()
+                            val user = User(
+                                id = uid.toString(),
+                                nama = nama_lengkap.toString(),
+                                email = email.toString(),
+                            )
+
+                            db.getReference("users").child(uid.toString()).setValue(user)
+
+                            Toast.makeText(this, "Registrasi berhasil", Toast.LENGTH_SHORT)
+                                .show()
+                            val intent = Intent(this, MainActivity::class.java)
+                            startActivity(intent)
+                            finish()
+                        } else {
+
+                            Log.d("RegisterActivity", "Registrasi gagal", it.exception)
+
+                            Toast.makeText(this, "Registrasi gagal", Toast.LENGTH_SHORT).show()
+                        }
+                    }
             }
 
         }

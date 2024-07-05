@@ -27,6 +27,7 @@ class OnboardingActivity : FragmentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        window.statusBarColor = getColor(R.color.softpink)
         setContentView(R.layout.activity_onboarding)
 
         val layouts = listOf(
