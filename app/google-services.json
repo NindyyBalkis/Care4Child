@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "426927185060",
+    "firebase_url": "https://care4child-ee15b-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "care4child-ee15b",
+    "storage_bucket": "care4child-ee15b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:426927185060:android:9f14bc4b8cb87a89c69a31",
+        "android_client_info": {
+          "package_name": "com.example.projectmobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDV8rffjw-eC-5etnhyj1KOHBoYEAxioNU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
